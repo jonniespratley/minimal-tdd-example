@@ -4,8 +4,11 @@
   "description": "A bare bones example of setting up tdd.",
   "main": "index.js",
   "scripts": {
+    "start": "node server",
     "test": "mocha test/specs -r babel-register",
-    "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov npm test"
+    "test:e2e": "./node_modules/.bin/nightwatch",
+    "test:install-drivers": "sh ./bin/install-drivers.sh",
+    "test:coverage": "cross-env NODE_ENV=test nyc --reporter=lcov npm test"
   },
   "author": "Jonnie Spratley",
   "license": "ISC",
@@ -21,7 +24,6 @@
     "selenium-standalone": "^6.8.0"
   },
   "dependencies": {
-    "express": "^4.15.4",
-    "serve-static": "^1.12.4"
+    "express": "^4.15.4"
   }
 }
