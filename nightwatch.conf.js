@@ -1,20 +1,18 @@
 'use strict';
+const path = require('path');
 
 //http://nightwatchjs.org/gettingstarted#basic-settings
 const config = {
-  "src_folders" : ["test/integration"],
+  "src_folders" : ["test/integration/specs"],
   "output_folder" : "reports",
-  "custom_commands_path" : "",
-  "custom_assertions_path" : "",
-  "page_objects_path" : "",
+  "page_objects_path" : "test/integration/pages",
   "globals_path" : "",
-
   "selenium" : {
-    "start_process" : false,
-    "server_path" : "",
+    "start_process" : true,
+    "server_path" : path.resolve(__dirname, './bin/selenium-server-standalone-3.0.1.jar'),
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : ""
+      "webdriver.chrome.driver" : path.resolve(__dirname, './bin/chromedriver')
     }
   },
 
@@ -23,12 +21,6 @@ const config = {
       "launch_url" : "http://localhost:9001",
       "selenium_port"  : 4444,
       "selenium_host"  : "localhost",
-      "desiredCapabilities": {
-        "browserName": "chrome"
-      }
-    }
-
-    "chrome" : {
       "desiredCapabilities": {
         "browserName": "chrome"
       }
