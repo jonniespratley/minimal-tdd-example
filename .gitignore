@@ -1,0 +1,12 @@
+node_modules
+dist
+.tmp
+bower_components
+test/bower_components
+.c9
+.git
+temp
+.nyc
+.log
+.nyc_output
+coverage

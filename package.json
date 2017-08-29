@@ -1,0 +1,25 @@
+{
+  "name": "minimal-tdd-example",
+  "version": "1.0.0",
+  "description": "A bare bones example of setting up tdd.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/specs -r babel-register",
+    "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov npm test"
+  },
+  "author": "Jonnie Spratley",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-istanbul": "^4.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.1",
+    "cross-env": "^5.0.5",
+    "mocha": "^3.5.0"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "serve-static": "^1.12.4"
+  }
+}
