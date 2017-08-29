@@ -12,3 +12,6 @@ temp
 coverage
 *.log
 reports
+bin/chromedriver
+bin/*.zip
+bin/*.jar
